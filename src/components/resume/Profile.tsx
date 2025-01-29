@@ -6,7 +6,7 @@ const ProfileSection = () => {
     <section className="flex flex-row gap-[72px] items-center">
       {/* profile image */}
       <Image
-        src={"/images/profile.png"}
+        src={"/imsunny/images/profile.png"}
         alt="poster image"
         width={260}
         height={260}

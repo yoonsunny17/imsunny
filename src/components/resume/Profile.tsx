@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Typewriter from "../common/Typewriter";
 
 const ProfileSection = () => {
   return (
@@ -15,9 +16,7 @@ const ProfileSection = () => {
       <div className="flex flex-col gap-10">
         {/* title */}
         {/* // TODO: typewriter effect 추가 */}
-        <p className="font-bold text-4xl">
-          Hello I&apos;m <span>Yoon sun</span>
-        </p>
+        <Typewriter />
         {/* body */}
         <div className="space-y-2 text-lg">
           {/* email */}

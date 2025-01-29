@@ -101,7 +101,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
 
 const ProjectsSection = () => {
   return (
-    <section className="flex flex-col gap-8">
+    <section id="PROJECTS" className="scroll-mt-32 flex flex-col gap-8">
       <CategoryTitle title="PROJECTS" />
       <div className="flex flex-col gap-8 border-l-2 border-gray-200 pl-6">
         {resumeData.projects.map((project, idx) => (

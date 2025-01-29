@@ -50,7 +50,7 @@ const CareerInfo: React.FC<CareerInfoProps> = ({
 
 const CareerSection = () => {
   return (
-    <section className="flex flex-col gap-8">
+    <section id="CAREERS" className="scroll-mt-32 flex flex-col gap-8">
       <CategoryTitle title="CAREERS" />
       <div className="border-l-2 border-gray-200 pl-6">
         {resumeData.careers.map((career, idx) => (

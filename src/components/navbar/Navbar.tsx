@@ -7,6 +7,7 @@ const TOP_OFFSET = 66;
 
 const Navbar = () => {
   const [showBackground, setShowBackground] = useState(false);
+  const [activeItem, setActiveItem] = useState<string>("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,11 +49,31 @@ const Navbar = () => {
             gap-7
           "
         >
-          <NavbarItem label="INTRODUCE" />
-          <NavbarItem label="SKILLS" />
-          <NavbarItem label="CAREERS" />
-          <NavbarItem label="PROJECTS" />
-          <NavbarItem label="OTHERS" />
+          <NavbarItem
+            label="INTRODUCE"
+            setActiveItem={setActiveItem}
+            isActive={activeItem === "INTRODUCE"}
+          />
+          <NavbarItem
+            label="SKILLS"
+            setActiveItem={setActiveItem}
+            isActive={activeItem === "SKILLS"}
+          />
+          <NavbarItem
+            label="CAREERS"
+            setActiveItem={setActiveItem}
+            isActive={activeItem === "CAREERS"}
+          />
+          <NavbarItem
+            label="PROJECTS"
+            setActiveItem={setActiveItem}
+            isActive={activeItem === "PROJECTS"}
+          />
+          <NavbarItem
+            label="OTHERS"
+            setActiveItem={setActiveItem}
+            isActive={activeItem === "OTHERS"}
+          />
         </div>
       </div>
     </nav>

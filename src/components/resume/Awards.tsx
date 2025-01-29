@@ -43,7 +43,7 @@ const AwardInfo: React.FC<AwardInfoProps> = ({
 
 const AwardSection = () => {
   return (
-    <section className="flex flex-col gap-8">
+    <section id="OTHERS" className="scroll-mt-32 flex flex-col gap-8">
       <CategoryTitle title="AWARDS" />
       <div className="flex flex-col gap-8 border-l-2 border-gray-200 pl-6">
         {resumeData.awards.map((award, idx) => (

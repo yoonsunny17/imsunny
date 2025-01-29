@@ -68,7 +68,7 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
 
 const SkillSection = () => {
   return (
-    <section className="flex flex-col gap-8">
+    <section id="SKILLS" className="scroll-mt-32 flex flex-col gap-8">
       <div className="flex flex-row justify-between">
         <CategoryTitle title="SKILLS" />
         <div className="flex flex-col gap-1">

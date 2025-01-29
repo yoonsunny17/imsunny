@@ -4,7 +4,7 @@ import { resumeData } from "@/data/resumeData";
 
 const IntroduceSection = () => {
   return (
-    <section className="flex flex-row gap-20">
+    <section id="INTRODUCE" className="scroll-mt-32 flex flex-row gap-20">
       <CategoryTitle title="INTRODUCE" />
       <div className="flex flex-col gap-4">
         {resumeData.introduce.descriptions.map((description, idx) => (

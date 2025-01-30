@@ -31,7 +31,7 @@ const NavbarItem: React.FC<NavbarItemProps> = ({
           }}
         >
           <Image
-            src={"/imsunny/images/imsunny.png"}
+            src={"/imsunny/images/ImSunny.png"}
             width={100}
             height={100}
             alt="logo"

@@ -19,8 +19,8 @@ const CareerInfo: React.FC<CareerInfoProps> = ({
   return (
     <div className="mb-8">
       {/* period & company */}
-      <div className="flex items-baseline mb-4 gap-8 text-xl">
-        <span className="text-[#808080] w-44 text-right">{period}</span>
+      <div className="flex items-baseline mb-4 gap-8 text-lg lg:text-xl">
+        <span className="text-[#808080] w-40 lg:w-44 text-right">{period}</span>
         <h1 className="font-bold">{company}</h1>
       </div>
 
@@ -52,7 +52,7 @@ const CareerSection = () => {
   return (
     <section id="CAREERS" className="scroll-mt-32 flex flex-col gap-8">
       <CategoryTitle title="CAREERS" />
-      <div className="border-l-2 border-gray-200 pl-6">
+      <div className="flex flex-col lg:gap-8 border-l-2 border-gray-200 pl-6">
         {resumeData.careers.map((career, idx) => (
           <CareerInfo key={idx} {...career} />
         ))}

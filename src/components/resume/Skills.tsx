@@ -1,6 +1,13 @@
 import React from "react";
 import CategoryTitle from "../common/CategoryTitle";
 import { resumeData } from "@/data/resumeData";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { AiOutlineQuestionCircle } from "react-icons/ai";
 
 interface GuideLineProps {
   score: number;
@@ -42,19 +49,50 @@ const badgeColor = (score: number) => {
   }
 };
 
+const TooltipBtn = () => {
+  return (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild className="block lg:hidden">
+          <button>
+            <AiOutlineQuestionCircle />
+          </button>
+        </TooltipTrigger>
+        <TooltipContent className="bg-white">
+          <div className="flex flex-col gap-1">
+            <GuideLine
+              score={3}
+              text="꾸준한 실무 경험이 존재하고, 서비스 환경에 맞는 코드 구현이 가능함"
+            />
+            <GuideLine
+              score={2}
+              text="서비스 기능 구현이 가능하나, 심화 기능 구현을 위한 추가적인 학습이
+              필요함"
+            />
+            <GuideLine
+              score={1}
+              text="구조를 이해하고 기본 기능 구현이 가능함"
+            />
+          </div>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
+};
+
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
   return (
     <div className="flex flex-row gap-8 items-baseline">
       {/* skill category title */}
-      <header className="w-36 text-right text-xl text-[#808080]">
+      <header className="w-36 text-right lg:text-xl text-[#808080]">
         {title}
       </header>
       {/* skills */}
-      <div className="flex flex-row flex-wrap w-full gap-6">
+      <div className="flex flex-row flex-wrap w-full gap-4 lg:gap-6">
         {skills.map((skill) => (
           <span
             key={skill.name}
-            className={`px-3 py-1 rounded-full text-sm ${badgeColor(
+            className={`px-3 py-1 rounded-full text-xs lg:text-sm ${badgeColor(
               skill.score
             )}`}
           >
@@ -71,7 +109,10 @@ const SkillSection = () => {
     <section id="SKILLS" className="scroll-mt-32 flex flex-col gap-8">
       <div className="flex flex-row justify-between">
         <CategoryTitle title="SKILLS" />
-        <div className="flex flex-col gap-1">
+        <TooltipBtn />
+
+        {/* guideline */}
+        <div className="flex-col gap-1 hidden lg:block">
           <GuideLine
             score={3}
             text="꾸준한 실무 경험이 존재하고, 서비스 환경에 맞는 코드 구현이 가능함"

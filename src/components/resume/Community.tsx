@@ -16,8 +16,8 @@ const CommunityInfo: React.FC<CommunityInfoProps> = ({
   return (
     <div className="mb-8">
       {/* period & title */}
-      <div className="flex items-baseline mb-4 gap-8 text-xl">
-        <span className="text-[#808080] w-44 text-right">{period}</span>
+      <div className="flex items-baseline mb-4 gap-8 text-lg lg:text-xl">
+        <span className="text-[#808080] w-40 lg:w-44 text-right">{period}</span>
         <h1 className="font-bold">{title}</h1>
       </div>
 
@@ -40,7 +40,7 @@ const CommunitySection = () => {
   return (
     <section className="flex flex-col gap-8">
       <CategoryTitle title="COMMUNITY" />
-      <div className="flex flex-col gap-8 border-l-2 border-gray-200 pl-6">
+      <div className="flex flex-col lg:gap-8 border-l-2 border-gray-200 pl-6">
         {resumeData.community.map((comm, idx) => (
           <CommunityInfo key={idx} {...comm} />
         ))}

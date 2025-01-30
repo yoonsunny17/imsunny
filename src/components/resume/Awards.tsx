@@ -18,8 +18,8 @@ const AwardInfo: React.FC<AwardInfoProps> = ({
   return (
     <div className="mb-8">
       {/* period & title */}
-      <div className="flex items-baseline mb-4 gap-8 text-xl">
-        <span className="text-[#808080] w-44 text-right">{period}</span>
+      <div className="flex items-baseline mb-4 gap-8 text-lg lg:text-xl">
+        <span className="text-[#808080] w-40 lg:w-44 text-right">{period}</span>
         <h1 className="font-bold">{title}</h1>
       </div>
 
@@ -45,7 +45,7 @@ const AwardSection = () => {
   return (
     <section id="OTHERS" className="scroll-mt-32 flex flex-col gap-8">
       <CategoryTitle title="AWARDS" />
-      <div className="flex flex-col gap-8 border-l-2 border-gray-200 pl-6">
+      <div className="flex flex-col lg:gap-8 border-l-2 border-gray-200 pl-6">
         {resumeData.awards.map((award, idx) => (
           <AwardInfo key={idx} {...award} />
         ))}

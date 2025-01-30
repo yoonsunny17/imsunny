@@ -4,7 +4,10 @@ import Typewriter from "../common/Typewriter";
 
 const ProfileSection = () => {
   return (
-    <section className="flex flex-row gap-[72px] items-center">
+    <section
+      id="HOME"
+      className="scroll-mt-32 flex flex-row gap-[72px] items-center"
+    >
       {/* profile image */}
       <Image
         src={"/imsunny/images/profile.png"}
@@ -15,7 +18,6 @@ const ProfileSection = () => {
       />
       <div className="flex flex-col gap-10">
         {/* title */}
-        {/* // TODO: typewriter effect 추가 */}
         <Typewriter />
         {/* body */}
         <div className="space-y-2 text-lg">

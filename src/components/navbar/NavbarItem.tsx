@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface NavbarItemProps {
@@ -18,17 +19,38 @@ const NavbarItem: React.FC<NavbarItemProps> = ({
     }
   };
   return (
-    <div
-      className={`text-sm cursor-pointer transition ${
-        isActive ? "text-[#30B0C7]" : "hover:text-[#30B0C7]"
-      }`}
-      onClick={() => {
-        setActiveItem(label);
-        scrollToSection(label);
-      }}
-    >
-      {label}
-    </div>
+    <>
+      {label === "HOME" ? (
+        <div
+          className={`text-sm cursor-pointer transition ${
+            isActive ? "text-[#30B0C7]" : "hover:text-[#30B0C7]"
+          }`}
+          onClick={() => {
+            setActiveItem(label);
+            scrollToSection(label);
+          }}
+        >
+          <Image
+            src={"/imsunny/images/imsunny.png"}
+            width={100}
+            height={100}
+            alt="logo"
+          />
+        </div>
+      ) : (
+        <div
+          className={`text-sm cursor-pointer transition ${
+            isActive ? "text-[#30B0C7]" : "hover:text-[#30B0C7]"
+          }`}
+          onClick={() => {
+            setActiveItem(label);
+            scrollToSection(label);
+          }}
+        >
+          {label}
+        </div>
+      )}
+    </>
   );
 };
 

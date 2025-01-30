@@ -41,12 +41,20 @@ const Navbar = () => {
           ${showBackground ? "bg-white drop-shadow-lg bg-opacity-90" : ""}
         `}
       >
+        {/* logo */}
+        <div className="flex items-center">
+          <NavbarItem
+            label="HOME"
+            setActiveItem={setActiveItem}
+            isActive={activeItem === "HOME"}
+          />
+        </div>
         <div
           className="
             flex
-            flex-row
-            ml-8
+            flex-grow
             gap-7
+            justify-center
           "
         >
           <NavbarItem

@@ -239,6 +239,9 @@ export const resumeData = {
     {
       title: "RE-VERSE",
       period: "2022.10 - 2022.11",
+      notion:
+        "https://yoonsunny.notion.site/RE-VERSE-fff412bba55881eb943cc6a2177c69ae?pvs=4",
+      github: "https://github.com/yoonsunny17/re-verse",
       details: [
         {
           organizer: "삼성 청년 SW 아카데미",
@@ -285,6 +288,9 @@ export const resumeData = {
     {
       title: "GGOTMARI",
       period: "2022.08 - 2022.10",
+      notion:
+        "https://yoonsunny.notion.site/GGOTMARI-fff412bba55881f68551dc0120e4abcc?pvs=4",
+      github: "https://github.com/yoonsunny17/ggotmari",
       details: [
         {
           organizer: "삼성 청년 SW 아카데미",
@@ -324,6 +330,9 @@ export const resumeData = {
     {
       title: "PARSLEY",
       period: "2022.07 - 2022.08",
+      notion:
+        "https://yoonsunny.notion.site/PARSLEY-fff412bba55881f5b4d4d3df9d369da6?pvs=4",
+      github: "https://github.com/yoonsunny17/parsley",
       details: [
         {
           organizer: "삼성 청년 SW 아카데미",

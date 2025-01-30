@@ -50,7 +50,7 @@ const Typewriter = () => {
   }, [currPhrase, isDeleting, phraseIdx]);
 
   return (
-    <div className="text-2xl lg:text-4xl font-bold">
+    <div className="text-2xl lg:text-4xl font-bold cursor-default">
       {currPhrase}
       <span className="animate-blink">|</span>
     </div>

@@ -2,9 +2,13 @@ import React from "react";
 import CategoryTitle from "../common/CategoryTitle";
 import { resumeData } from "@/data/resumeData";
 
+import { SiNotion, SiGithub } from "react-icons/si";
+
 interface ProjectInfoProps {
   title: string;
   period: string;
+  notion?: string;
+  github?: string;
   details: {
     organizer: string;
     infos: string[];
@@ -18,6 +22,8 @@ interface ProjectInfoProps {
 const ProjectInfo: React.FC<ProjectInfoProps> = ({
   title,
   period,
+  notion,
+  github,
   details,
 }) => {
   return (
@@ -25,7 +31,31 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
       {/* period & title */}
       <div className="flex items-baseline mb-4 gap-8 text-lg lg:text-xl">
         <span className="text-[#808080] w-40 lg:w-44 text-right">{period}</span>
-        <h1 className="font-bold">{title}</h1>
+        <div className="flex flex-row items-center gap-4">
+          <h1 className="font-bold">{title}</h1>
+          <div className="flex flex-row gap-2">
+            {notion && (
+              <a
+                href={notion}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-black transition"
+              >
+                <SiNotion className="w-5 h-5" />
+              </a>
+            )}
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-black transition"
+              >
+                <SiGithub className="w-5 h-5" />
+              </a>
+            )}
+          </div>
+        </div>
       </div>
 
       {/* project detail */}

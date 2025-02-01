@@ -229,7 +229,7 @@ export const resumeData = {
           skill:
             "HTML/CSS | Javascript | Typescript | React.js | MobX | React Query | Styled-components | Emotion | MUI",
           roles: [
-            "유형 및 무형의 모든 상품을 판매하는 이커머스 서비스 구현",
+            "이커머스 서비스에서 사용자 중심의 프론트엔드 개발 및 최적화",
             "문의 관리 및 유저 정보 관리 UX/UI 기능 설계 및 개발 (문의 내역, 구매 내역, 최근 본 상품 등)",
             "레거시 코드 리팩토링 및 기존 비즈니스 유지보수",
           ],

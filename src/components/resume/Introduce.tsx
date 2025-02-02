@@ -11,7 +11,7 @@ const IntroduceSection = () => {
       <CategoryTitle title="INTRODUCE" />
       <div className="flex flex-col gap-4">
         {resumeData.introduce.descriptions.map((description, idx) => (
-          <p key={idx} className="text-sm text-gray-700 leading-relaxed">
+          <p key={idx} className="text-sm text-themeText leading-relaxed">
             {description}
           </p>
         ))}

@@ -8,6 +8,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
+import clsx from "clsx";
 
 interface GuideLineProps {
   score: number;
@@ -26,26 +27,27 @@ const GuideLine: React.FC<GuideLineProps> = ({ score, text }) => {
   return (
     <div className="flex flex-row items-center gap-2">
       <div
-        className={`${
+        className={clsx(
+          "bg-opacity-30 w-8 h-3",
           score === 3
-            ? "bg-[#FF3a30] bg-opacity-30"
+            ? "bg-[#FF3a30] bg-opacity-30 dark:bg-transparent dark:border-2 dark:border-[#1BCEDF]"
             : score === 2
-            ? "bg-[#FFCC00] bg-opacity-30"
-            : "bg-[#D9D9D9] bg-opacity-50"
-        } bg-opacity-30 w-8 h-3`}
+            ? "bg-[#FFCC00] bg-opacity-30 dark:bg-transparent dark:border-2 dark:border-[#5B247A]"
+            : "bg-[#D9D9D9] bg-opacity-50 dark:bg-transparent dark:border-2 dark:border-zinc-700"
+        )}
       />
-      <p className="text-xs text-gray-600">{text}</p>
+      <p className="text-xs text-themeText-guide">{text}</p>
     </div>
   );
 };
 
 const badgeColor = (score: number) => {
   if (score === 1) {
-    return "bg-[#D9D9D9] bg-opacity-50";
+    return "bg-[#D9D9D9] bg-opacity-50 dark:bg-transparent dark:border-2 dark:border-zinc-700";
   } else if (score === 2) {
-    return "bg-[#FFCC00] bg-opacity-30";
+    return "bg-[#FFCC00] bg-opacity-30 dark:bg-transparent dark:border-2 dark:border-[#5B247A]";
   } else {
-    return "bg-[#FF3a30] bg-opacity-30";
+    return "bg-[#FF3a30] bg-opacity-30 dark:bg-transparent dark:border-2 dark:border-[#1BCEDF]";
   }
 };
 
@@ -84,7 +86,7 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
   return (
     <div className="flex flex-row gap-8 items-baseline">
       {/* skill category title */}
-      <header className="w-36 text-right lg:text-xl text-[#808080]">
+      <header className="w-36 text-right lg:text-xl text-themeText">
         {title}
       </header>
       {/* skills */}

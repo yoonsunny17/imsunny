@@ -30,9 +30,9 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
     <div className="mb-8">
       {/* period & title */}
       <div className="flex items-baseline mb-4 gap-8 text-lg lg:text-xl">
-        <span className="text-[#808080] w-40 lg:w-44 text-right">{period}</span>
+        <span className="text-themeText w-40 lg:w-44 text-right">{period}</span>
         <div className="flex flex-row items-center gap-4">
-          <h1 className="font-bold">{title}</h1>
+          <h1 className="font-bold text-themeText-title">{title}</h1>
           <div className="flex flex-row gap-2">
             {notion && (
               <a
@@ -62,15 +62,15 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
       <div className="flex flex-col gap-8">
         {details.map((detail, idx) => (
           <div key={idx} className="flex flex-row gap-8">
-            <p className="w-44 text-right text-sm text-[#808080] font-semibold"></p>
+            <p className="w-44 text-right text-sm text-themeText font-semibold"></p>
 
             <div className="flex flex-col text-sm gap-2 w-4/5 lg:w-2/3">
-              <h3 className="text-[#808080] font-semibold">
+              <h3 className="text-themeText font-semibold">
                 {detail.organizer}
               </h3>
 
               {/* role detail */}
-              <ul className="text-gray-700 space-y-6 list-disc list-inside">
+              <ul className="text-themeText space-y-6 list-disc list-inside">
                 {/* info */}
                 <li>
                   Info
@@ -133,7 +133,7 @@ const ProjectsSection = () => {
   return (
     <section id="PROJECTS" className="scroll-mt-32 flex flex-col gap-8">
       <CategoryTitle title="PROJECTS" />
-      <div className="flex flex-col lg:gap-8 border-l-2 border-gray-200 pl-6">
+      <div className="flex flex-col lg:gap-8 border-l-2 border-themeText-border pl-6">
         {resumeData.projects.map((project, idx) => (
           <ProjectInfo key={idx} {...project} />
         ))}

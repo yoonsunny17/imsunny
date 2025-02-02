@@ -20,7 +20,7 @@ const ProfileSection = () => {
         {/* title */}
         <Typewriter />
         {/* body */}
-        <div className="space-y-2 text-lg">
+        <div className="space-y-2 text-lg text-themeText">
           {/* email */}
           <p className="text-sm">
             <span className="font-bold">Email.</span> jyoonsun0217@gmail.com
@@ -51,7 +51,7 @@ const ProfileSection = () => {
           {/* phone */}
           <p className="text-sm cursor-default">
             <span className="font-bold">Phone.</span>{" "}
-            <span className="bg-gray-200 text-xs text-gray-500 px-2 py-1 rounded-md">
+            <span className="bg-gray-200 dark:bg-zinc-800 dark:bg-opacity-70 text-xs text-gray-500 dark:text-zinc-400 px-2 py-1 rounded-full">
               Please contact me by email
             </span>
           </p>

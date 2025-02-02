@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import NavbarItem from "./NavbarItem";
+import ThemeSwitch from "../common/ThemeSwitch";
+import clsx from "clsx";
 
 const TOP_OFFSET = 66;
 
@@ -28,18 +30,11 @@ const Navbar = () => {
   return (
     <nav className="w-full fixed z-40">
       <div
-        className={`
-          flex
-          flex-row
-          px-4
-          md:px-16
-          py-6
-          items-center
-          justify-center
-          transition
-          duration-500
-          ${showBackground ? "bg-white drop-shadow-lg bg-opacity-90" : ""}
-        `}
+        className={clsx(
+          "flex flex-row px-4 md:px-16 py-6 items-center justify-center transition duration-700",
+          showBackground &&
+            "bg-white dark:bg-black dark:bg-opacity-90 drop-shadow-lg bg-opacity-90"
+        )}
       >
         {/* logo */}
         <div className="flex items-center">
@@ -83,6 +78,8 @@ const Navbar = () => {
             isActive={activeItem === "OTHERS"}
           />
         </div>
+        {/* theme switch */}
+        <ThemeSwitch />
       </div>
     </nav>
   );

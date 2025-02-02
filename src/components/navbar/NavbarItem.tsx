@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
 
@@ -22,9 +23,7 @@ const NavbarItem: React.FC<NavbarItemProps> = ({
     <>
       {label === "HOME" ? (
         <div
-          className={`text-sm cursor-pointer transition ${
-            isActive ? "text-[#30B0C7]" : "hover:text-[#30B0C7]"
-          }`}
+          className="text-sm cursor-pointer transition"
           onClick={() => {
             setActiveItem(label);
             scrollToSection(label);
@@ -39,9 +38,10 @@ const NavbarItem: React.FC<NavbarItemProps> = ({
         </div>
       ) : (
         <div
-          className={`text-sm cursor-pointer transition ${
-            isActive ? "text-[#30B0C7]" : "hover:text-[#30B0C7]"
-          }`}
+          className={clsx(
+            "text-sm cursor-pointer transition hover:text-[#30B0C7]",
+            isActive ? "text-[#30B0C7]" : "text-themeText hover:text-[#30B0C7]"
+          )}
           onClick={() => {
             setActiveItem(label);
             scrollToSection(label);

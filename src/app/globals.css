@@ -96,6 +96,10 @@ html {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --themeText: #374151;
+    --themeText-title: #1f2937;
+    --themeText-border: #e5e7eb;
+    --themeText-guide: #4b5563;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -122,6 +126,10 @@ html {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --themeText: #a1a1aa;
+    --themeText-title: #d4d4d8;
+    --themeText-border: #27272a;
+    --themeText-guide: #71717a;
   }
 }
 

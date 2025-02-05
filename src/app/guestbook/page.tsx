@@ -155,7 +155,7 @@ const GuestBook = () => {
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-400 w-16 h-8 opacity-50"></div>
               <div className="text-gray-800 flex flex-col gap-2">
                 <p className="font-semibold text-sm mb-2">{message.name}</p>
-                <p className="line-clamp-2 text-[#374151] h-12">
+                <p className="line-clamp-5 text-[#374151] h-32">
                   {message.message}
                 </p>
                 <p className="text-gray-500 text-xs">

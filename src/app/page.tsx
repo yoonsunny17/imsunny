@@ -8,7 +8,7 @@ import Community from "@/components/resume/Community";
 import Educations from "@/components/resume/Educations";
 import Certificates from "@/components/resume/Certificates";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="flex flex-col gap-24 pb-24">
       <Profile />
@@ -22,4 +22,6 @@ export default function Home() {
       <Certificates />
     </div>
   );
-}
+};
+
+export default Home;

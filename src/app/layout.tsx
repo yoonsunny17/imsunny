@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar/Navbar";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "ImSUNNY",
+  title: "ImSunny",
   description: "Introduce myself",
   icons: {
     icon: "/imsunny/images/waves.png",

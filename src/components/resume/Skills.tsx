@@ -60,7 +60,7 @@ const TooltipBtn = () => {
             <AiOutlineQuestionCircle />
           </button>
         </TooltipTrigger>
-        <TooltipContent className="bg-white">
+        <TooltipContent className="bg-zinc-900">
           <div className="flex flex-col gap-1">
             <GuideLine
               score={3}

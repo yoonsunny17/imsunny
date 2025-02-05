@@ -394,17 +394,6 @@ export const resumeData = {
   ],
   community: [
     {
-      title: "프리온보딩 FE 챌린지 1월: 레거시 유지보수와 데이터 모으기 ",
-      period: "2025.01",
-      organizer: "원티드",
-    },
-    {
-      title:
-        "프리온보딩 FE 챌린지 12월: 현업에서 살아남기 위한 경력자의 기술 팁",
-      period: "2024.12",
-      organizer: "원티드",
-    },
-    {
       title: "삼성 청년 SW 아카데미 (SSAFY) 7기",
       period: "2022.01 - 2022.12",
       organizer: "삼성",
@@ -424,7 +413,7 @@ export const resumeData = {
       organizer: "ACTFL",
     },
     {
-      title: "정보처리기사 필기기",
+      title: "정보처리기사 필기",
       period: "2024.03",
       organizer: "한국산업인력공단",
     },

@@ -4,12 +4,17 @@ import React, { useEffect, useState } from "react";
 import NavbarItem from "./NavbarItem";
 import ThemeSwitch from "../common/ThemeSwitch";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
+
+import { GiFootprint } from "react-icons/gi";
+import Link from "next/link";
 
 const TOP_OFFSET = 66;
 
 const Navbar = () => {
   const [showBackground, setShowBackground] = useState(false);
   const [activeItem, setActiveItem] = useState<string>("");
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +47,7 @@ const Navbar = () => {
             label="HOME"
             setActiveItem={setActiveItem}
             isActive={activeItem === "HOME"}
+            pathname={pathname}
           />
         </div>
         <div
@@ -56,30 +62,44 @@ const Navbar = () => {
             label="INTRODUCE"
             setActiveItem={setActiveItem}
             isActive={activeItem === "INTRODUCE"}
+            pathname={pathname}
           />
           <NavbarItem
             label="SKILLS"
             setActiveItem={setActiveItem}
             isActive={activeItem === "SKILLS"}
+            pathname={pathname}
           />
           <NavbarItem
             label="CAREERS"
             setActiveItem={setActiveItem}
             isActive={activeItem === "CAREERS"}
+            pathname={pathname}
           />
           <NavbarItem
             label="PROJECTS"
             setActiveItem={setActiveItem}
             isActive={activeItem === "PROJECTS"}
+            pathname={pathname}
           />
           <NavbarItem
             label="OTHERS"
             setActiveItem={setActiveItem}
             isActive={activeItem === "OTHERS"}
+            pathname={pathname}
           />
         </div>
-        {/* theme switch */}
-        <ThemeSwitch />
+        <div className="flex flex-row gap-3">
+          {/* go to guest book */}
+          <Link href={"/guestbook"}>
+            <GiFootprint
+              className="cursor-pointer text-[#30B0C7] hover:text-[#3079c7]"
+              size={24}
+            />
+          </Link>
+          {/* theme switch */}
+          <ThemeSwitch />
+        </div>
       </div>
     </nav>
   );

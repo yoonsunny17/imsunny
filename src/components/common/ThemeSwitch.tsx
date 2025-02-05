@@ -29,7 +29,7 @@ const ThemeSwitch = () => {
   if (resolvedTheme === "dark") {
     return (
       <FiMoon
-        className="cursor-pointer text-[#30B0C7]"
+        className="cursor-pointer text-[#30B0C7] hover:text-[#3079c7]"
         size={24}
         onClick={() => setTheme("light")}
       />
@@ -39,7 +39,7 @@ const ThemeSwitch = () => {
   if (resolvedTheme === "light") {
     return (
       <FiSun
-        className="cursor-pointer text-[#30B0C7]"
+        className="cursor-pointer text-[#30B0C7] hover:text-[#3079c7]"
         size={24}
         onClick={() => setTheme("dark")}
       />

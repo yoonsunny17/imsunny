@@ -165,7 +165,7 @@ const GuestBook = () => {
                       month: "2-digit",
                       day: "2-digit",
                     })
-                    .slice(0, -1)}
+                    .slice(0, 6)}
                 </p>
               </div>
             </div>

@@ -56,10 +56,14 @@ const GuestBook = () => {
 
     if (!newMessage.message) return;
 
+    const offset = new Date().getTimezoneOffset() * 60000;
+    const createdAt = new Date(Date.now() - offset);
+
+    console.log("createdAt: ", createdAt.toISOString());
     const messageToSubmit = {
       ...newMessage,
       name: newMessage.name === "" ? "익명" : newMessage.name,
-      createdAt: new Date().toISOString(),
+      createdAt: createdAt.toISOString(),
       theme: newMessage.theme,
     };
 

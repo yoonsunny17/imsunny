@@ -52,7 +52,7 @@ const Typewriter = () => {
   return (
     <div className="text-2xl text-[#374151] lg:text-4xl font-bold cursor-default dark:bg-gradient-to-r dark:from-[#5B247A] dark:to-[#1BCEDF] dark:bg-clip-text dark:text-transparent">
       {currPhrase}
-      <span className="animate-blink">|</span>
+      <span className="animate-blink dark:text-[#1BCEDF]">|</span>
     </div>
   );
 };

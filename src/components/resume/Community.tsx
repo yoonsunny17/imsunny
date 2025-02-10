@@ -45,15 +45,15 @@ const CommunitySection = () => {
       <CategoryTitle title="COMMUNITY" />
       <div className="flex flex-col gap-8 md:border-l-2 border-themeText-border md:pl-6">
         {resumeData.community.map((comm, idx) => (
-          <>
-            <CommunityInfo key={idx} {...comm} />
+          <React.Fragment key={idx}>
+            <CommunityInfo {...comm} />
             <hr
               className={clsx(
                 "md:hidden",
                 idx === resumeData.community.length - 1 ? "hidden" : ""
               )}
             />
-          </>
+          </React.Fragment>
         ))}
       </div>
     </section>

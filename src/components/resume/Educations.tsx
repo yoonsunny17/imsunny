@@ -45,15 +45,15 @@ const EducationSection = () => {
       <CategoryTitle title="EDUCATIONS" />
       <div className="flex flex-col gap-8 md:border-l-2 border-themeText-border md:pl-6">
         {resumeData.educations.map((education, idx) => (
-          <>
-            <EducationInfo key={idx} {...education} />
+          <React.Fragment key={idx}>
+            <EducationInfo {...education} />
             <hr
               className={clsx(
                 "md:hidden",
                 idx === resumeData.educations.length - 1 ? "hidden" : ""
               )}
             />
-          </>
+          </React.Fragment>
         ))}
       </div>
     </section>

@@ -50,15 +50,15 @@ const AwardSection = () => {
       <CategoryTitle title="AWARDS" />
       <div className="flex flex-col gap-8 md:border-l-2 border-themeText-border md:pl-6">
         {resumeData.awards.map((award, idx) => (
-          <>
-            <AwardInfo key={idx} {...award} />
+          <React.Fragment key={idx}>
+            <AwardInfo {...award} />
             <hr
               className={clsx(
                 "md:hidden",
                 idx === resumeData.awards.length - 1 ? "hidden" : ""
               )}
             />
-          </>
+          </React.Fragment>
         ))}
       </div>
     </section>

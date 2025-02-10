@@ -59,7 +59,6 @@ const GuestBook = () => {
     const offset = new Date().getTimezoneOffset() * 60000;
     const createdAt = new Date(Date.now() - offset);
 
-    console.log("createdAt: ", createdAt.toISOString());
     const messageToSubmit = {
       ...newMessage,
       name: newMessage.name === "" ? "익명" : newMessage.name,
@@ -104,7 +103,7 @@ const GuestBook = () => {
           }}
         >
           <div className="flex flex-row justify-between mb-4">
-            <div className="flex flex-row w-[88%] items-center justify-between">
+            <div className="flex flex-row w-full sm:w-[88%] items-center justify-between">
               <input
                 type="text"
                 placeholder="이름 (선택)"
@@ -128,7 +127,7 @@ const GuestBook = () => {
                 ))}
               </div>
             </div>
-            <div className="px-2 py-1.5 w-[10%]"></div>
+            <div className="px-2 py-1.5 w-[10%] sm:block hidden"></div>
           </div>
           <div className="flex flex-row justify-between">
             <input
@@ -137,9 +136,9 @@ const GuestBook = () => {
               onChange={(e) =>
                 setNewMessage((prev) => ({ ...prev, message: e.target.value }))
               }
-              className="px-4 py-1.5 w-[88%] rounded text-themeText text-sm border border-themeText-border focus:outline-none focus:border-[#30B0C7]"
+              className="px-4 py-1.5 mr-2 w-full rounded text-themeText text-sm border border-themeText-border focus:outline-none focus:border-[#30B0C7]"
             />
-            <button className="px-2 py-1.5  min-w-[36px] w-auto sm:w-[10%] border border-themeText-border text-themeText  text-xs sm:text-sm rounded whitespace-nowrap">
+            <button className="px-2 py-1.5 min-w-[36px] w-auto sm:w-[10%] border border-themeText-border text-themeText  text-xs sm:text-sm rounded whitespace-nowrap">
               게시
             </button>
           </div>

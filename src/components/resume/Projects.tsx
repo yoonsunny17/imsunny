@@ -42,7 +42,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
                 href={notion}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-black transition"
+                className="text-gray-600 hover:text-black dark:hover:text-gray-300 transition"
               >
                 <SiNotion className="w-5 h-5" />
               </a>
@@ -52,7 +52,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
                 href={github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-black transition"
+                className="text-gray-600 hover:text-black dark:hover:text-gray-300 transition"
               >
                 <SiGithub className="w-5 h-5" />
               </a>
@@ -137,15 +137,15 @@ const ProjectsSection = () => {
       <CategoryTitle title="PROJECTS" />
       <div className="flex flex-col gap-8 md:border-l-2 border-themeText-border md:pl-6">
         {resumeData.projects.map((project, idx) => (
-          <>
-            <ProjectInfo key={idx} {...project} />
+          <React.Fragment key={idx}>
+            <ProjectInfo {...project} />
             <hr
               className={clsx(
                 "md:hidden",
                 idx === resumeData.projects.length - 1 ? "hidden" : ""
               )}
             />
-          </>
+          </React.Fragment>
         ))}
       </div>
     </section>

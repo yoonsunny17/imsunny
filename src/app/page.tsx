@@ -10,7 +10,7 @@ import Certificates from "@/components/resume/Certificates";
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-24 pb-24">
+    <div className="flex flex-col gap-16 sm:gap-24 pb-16 sm:pb-24">
       <Profile />
       <Introduce />
       <Skills />

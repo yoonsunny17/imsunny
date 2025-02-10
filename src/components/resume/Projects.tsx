@@ -3,6 +3,7 @@ import CategoryTitle from "../common/CategoryTitle";
 import { resumeData } from "@/data/resumeData";
 
 import { SiNotion, SiGithub } from "react-icons/si";
+import clsx from "clsx";
 
 interface ProjectInfoProps {
   title: string;
@@ -27,10 +28,12 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
   details,
 }) => {
   return (
-    <div className="mb-8">
+    <div className="md:mb-8">
       {/* period & title */}
-      <div className="flex items-baseline mb-4 gap-8 text-lg lg:text-xl">
-        <span className="text-themeText w-40 lg:w-44 text-right">{period}</span>
+      <div className="flex items-baseline mb-4 gap-2 md:gap-8 lg:text-xl">
+        <span className="text-themeText w-40 lg:w-44 md:text-right">
+          {period}
+        </span>
         <div className="flex flex-row items-center gap-4">
           <h1 className="font-bold text-themeText-title">{title}</h1>
           <div className="flex flex-row gap-2">
@@ -62,9 +65,8 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
       <div className="flex flex-col gap-8">
         {details.map((detail, idx) => (
           <div key={idx} className="flex flex-row gap-8">
-            <p className="w-44 text-right text-sm text-themeText font-semibold"></p>
-
-            <div className="flex flex-col text-sm gap-2 w-4/5 lg:w-2/3">
+            <p className="hidden md:block w-44 text-right text-sm text-themeText font-semibold"></p>
+            <div className="flex flex-col text-sm gap-2 md:w-2/3">
               <h3 className="text-themeText font-semibold">
                 {detail.organizer}
               </h3>
@@ -72,7 +74,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
               {/* role detail */}
               <ul className="text-themeText space-y-6 list-disc list-inside">
                 {/* info */}
-                <li>
+                <li className="hidden md:block">
                   Info
                   <ul className="list-disc list-inside ps-5 mt-2">
                     {detail.infos.map((info, idx) => (
@@ -89,7 +91,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
 
                 {/* main feature */}
                 {detail.mainFeatures && (
-                  <li>
+                  <li className="hidden md:block">
                     Main feature
                     <ul className="list-disc list-inside ps-5 mt-2">
                       {detail.mainFeatures.map((feature, idx) => (
@@ -111,7 +113,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({
 
                 {/* what i learned */}
                 {detail.whatILearned && (
-                  <li>
+                  <li className="hidden md:block">
                     What I Learned
                     <ul className="list-disc list-inside ps-5 mt-2">
                       {detail.whatILearned.map((learned, idx) => (
@@ -133,9 +135,17 @@ const ProjectsSection = () => {
   return (
     <section id="PROJECTS" className="scroll-mt-32 flex flex-col gap-8">
       <CategoryTitle title="PROJECTS" />
-      <div className="flex flex-col lg:gap-8 border-l-2 border-themeText-border pl-6">
+      <div className="flex flex-col gap-8 md:border-l-2 border-themeText-border md:pl-6">
         {resumeData.projects.map((project, idx) => (
-          <ProjectInfo key={idx} {...project} />
+          <>
+            <ProjectInfo key={idx} {...project} />
+            <hr
+              className={clsx(
+                "md:hidden",
+                idx === resumeData.projects.length - 1 ? "hidden" : ""
+              )}
+            />
+          </>
         ))}
       </div>
     </section>

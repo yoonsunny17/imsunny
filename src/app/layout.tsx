@@ -19,10 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="min-w-[400px]">
         <Providers>
           <Navbar />
-          <div className="pt-32 mx-[60px]">{children}</div>
+          <div className="pt-32 mx-6 sm:mx-16">{children}</div>
         </Providers>
       </body>
     </html>

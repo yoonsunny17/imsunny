@@ -14,7 +14,7 @@ const ProfileSection = () => {
         alt="poster image"
         width={260}
         height={260}
-        className="rounded-full"
+        className="rounded-full hidden lg:block"
       />
       <div className="flex flex-col gap-10">
         {/* title */}

@@ -6,9 +6,7 @@ interface CategoryTitleProps {
 
 const CategoryTitle: React.FC<CategoryTitleProps> = ({ title }) => {
   return (
-    <p className="font-bold text-2xl lg:text-3xl text-[#30B0C7] w-60">
-      {title}
-    </p>
+    <p className="font-bold text-xl lg:text-2xl text-[#30B0C7] w-60">{title}</p>
   );
 };
 

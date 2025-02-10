@@ -55,7 +55,7 @@ const TooltipBtn = () => {
   return (
     <TooltipProvider>
       <Tooltip>
-        <TooltipTrigger asChild className="block lg:hidden">
+        <TooltipTrigger asChild className="hidden md:block lg:hidden">
           <button>
             <AiOutlineQuestionCircle />
           </button>
@@ -84,9 +84,9 @@ const TooltipBtn = () => {
 
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
   return (
-    <div className="flex flex-row gap-8 items-baseline">
+    <div className="flex flex-col sm:flex-row gap-8 items-baseline">
       {/* skill category title */}
-      <header className="w-36 text-right lg:text-xl text-themeText">
+      <header className="sm:w-36 text-right lg:text-xl text-themeText">
         {title}
       </header>
       {/* skills */}

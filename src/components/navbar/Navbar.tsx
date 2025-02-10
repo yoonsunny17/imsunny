@@ -36,7 +36,7 @@ const Navbar = () => {
     <nav className="w-full fixed z-40">
       <div
         className={clsx(
-          "flex flex-row px-4 md:px-16 py-6 items-center justify-center transition duration-700",
+          "flex flex-row px-6 sm:px-16 py-6 items-center justify-between transition duration-700",
           showBackground &&
             "bg-white dark:bg-black dark:bg-opacity-90 drop-shadow-lg bg-opacity-90"
         )}
@@ -50,12 +50,15 @@ const Navbar = () => {
             pathname={pathname}
           />
         </div>
+
+        {/* desktop ver. */}
         <div
           className="
-            flex
+            lg:flex
             flex-grow
             gap-7
             justify-center
+            hidden
           "
         >
           <NavbarItem

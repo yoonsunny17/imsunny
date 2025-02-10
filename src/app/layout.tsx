@@ -5,10 +5,30 @@ import Navbar from "@/components/navbar/Navbar";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "ImSunny",
-  description: "Introduce myself",
+  title: "ImSunny | Portfolio",
+  description: "Yoonsunny17의 개인 홈페이지입니다.",
+  keywords: ["yoonsunny17", "Yoonsunny", "포트폴리오", "웹 개발", "개발자"],
+  authors: [
+    { name: "Yoonsunny", url: "https://yoonsunny17.github.io/imsunny/" },
+  ],
+  robots: "index, follow",
   icons: {
     icon: "/imsunny/images/waves.png",
+  },
+  openGraph: {
+    title: "ImSunny | Portfolio",
+    description: "Yoonsunny17의 개인 홈페이지입니다.",
+    url: "https://yoonsunny17.github.io/imsunny/",
+    siteName: "ImSunny",
+    images: [
+      {
+        url: "/imsunny/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ImSunny Portfolio",
+      },
+    ],
+    type: "website",
   },
 };
 
@@ -19,6 +39,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="S9OA7NJsRVGX2rBL56VeZCLMgArkV3bgFYkhx8eC7xs"
+        />
+      </head>
       <body className="min-w-[400px]">
         <Providers>
           <Navbar />

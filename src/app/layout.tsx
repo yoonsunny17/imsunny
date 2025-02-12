@@ -5,18 +5,25 @@ import Navbar from "@/components/navbar/Navbar";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "ImSunny | Portfolio",
-  description: "Yoonsunny17의 개인 홈페이지입니다.",
-  keywords: ["yoonsunny17", "Yoonsunny", "포트폴리오", "웹 개발", "개발자"],
+  title: "ImSunny | Resume",
+  description: "yoonsunny17의의 개인 홈페이지입니다.",
+  keywords: [
+    "yoonsunny17",
+    "이력서",
+    "포트폴리오",
+    "웹 개발",
+    "개발자",
+    "프론트엔드",
+  ],
   authors: [
-    { name: "Yoonsunny", url: "https://yoonsunny17.github.io/imsunny/" },
+    { name: "yoonsunny17", url: "https://yoonsunny17.github.io/imsunny/" },
   ],
   robots: "index, follow",
   icons: {
     icon: "/imsunny/images/waves.png",
   },
   openGraph: {
-    title: "ImSunny | Portfolio",
+    title: "ImSunny | Resume",
     description: "Yoonsunny17의 개인 홈페이지입니다.",
     url: "https://yoonsunny17.github.io/imsunny/",
     siteName: "ImSunny",

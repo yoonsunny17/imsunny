@@ -27,7 +27,7 @@ const CareerInfo: React.FC<CareerInfoProps> = ({
       </div>
 
       {/* career detail */}
-      <div className="flex-col gap-8 hidden md:block">
+      <div className="flex-col gap-8 hidden md:block space-y-6">
         {details.map((info, idx) => (
           <div key={idx} className="flex flex-row gap-8">
             <p className="w-44 text-right text-sm text-themeText font-semibold">

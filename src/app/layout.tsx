@@ -47,10 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta
-          name="google-site-verification"
-          content="S9OA7NJsRVGX2rBL56VeZCLMgArkV3bgFYkhx8eC7xs"
-        />
+        <meta name="google-site-verification" content="Frontend Developer" />
       </head>
       <body className="min-w-[400px]">
         <Providers>

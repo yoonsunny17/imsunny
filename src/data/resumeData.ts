@@ -48,8 +48,12 @@ export const resumeData = {
         score: 3,
       },
       {
-        name: "MobX / Redux Toolkit",
+        name: "MobX",
         score: 3,
+      },
+      {
+        name: "Redux Toolkit",
+        score: 2,
       },
       {
         name: "MUI",
